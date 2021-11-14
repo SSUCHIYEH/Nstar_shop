@@ -50,7 +50,7 @@ export default function NavBar() {
                 <ul className="ul">
                     <li className="li li-logo" >
                         <NavItem to="/" >
-                            <img class="nav-logo" src={landind_page_img} />
+                            <img className="nav-logo" src={landind_page_img} />
                         </NavItem>
                     </li>
                     <li className="li"><a>women</a>
