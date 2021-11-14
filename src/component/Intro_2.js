@@ -3,7 +3,7 @@ function IntroTwo (){
     return(
        <div className="intro_2_container">
            <div className="intro_2_img">
-               <img className="" src={imgURL}/>
+               <img alt="" className="" src={imgURL}/>
 
            </div>
            <div className ="intro_2_describe">

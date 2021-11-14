@@ -1,18 +1,20 @@
-import { Col, Row } from "antd";
 import ProductItem from "./ProductItem";
-
+import { Col,Row } from "antd";
 
 export default function Productlist({ products, text }) {
+    console.log(products)
     return (
         <div className="container">
             <div className="productlist">
                 <p className="productlist-title">{text}</p>
-                <div className="productlist-row">
+                <Row gutter={52} className="productlist-row">
                     {products.map(product => (
+                        <Col span={6} key={product.id}>
                         <ProductItem product={product} />
+                        </Col>
                     ))}
 
-                </div>
+                </Row>
             </div>
         </div>
         
@@ -22,7 +24,7 @@ export default function Productlist({ products, text }) {
 }
 
 
-{/* <Row gutter={[32, 32]}>
+/* <Row gutter={[32, 32]}>
     {products.map(product => (
         <Col
             key={product.name}
@@ -48,4 +50,4 @@ export default function Productlist({ products, text }) {
             </section>
 
 
-*/}
+*/

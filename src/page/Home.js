@@ -19,19 +19,19 @@ function Home({ match }) {
                 <p className="star-title">熱門帳號</p>
                 <div className="star-bar">
                     <div className="star-item">
-                        <img className="star-img" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                        <img alt="" className="star-img" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         <p className="star-name">Becca1304</p>
                     </div>
                     <div className="star-item">
-                        <img className="star-img" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                        <img alt="" className="star-img" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         <p className="star-name">Becca1304</p>
                     </div>
                     <div className="star-item">
-                        <img className="star-img" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                        <img alt="" className="star-img" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         <p className="star-name">Becca1304</p>
                     </div>
                     <div className="star-item">
-                        <img className="star-img" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+                        <img alt="" className="star-img" src="https://images.pexels.com/photos/2690323/pexels-photo-2690323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
                         <p className="star-name">Becca1304</p>
                     </div>
                 </div>

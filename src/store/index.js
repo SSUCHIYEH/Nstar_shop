@@ -3,7 +3,6 @@ import products from "../json/women_top.json";
 import {
     SET_PAGE_CONTENT,
     ADD_CART_ITEM,
-    REMOVE_CART_ITEM,
     SET_PRODUCT_DETAIL
 } from "../const/constants.js";
 import useReducerWithThunk from 'use-reducer-thunk';

@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import { StoreContext } from "../store"
-import { Row, Col, Button } from "antd";
+import { StoreContext } from "../store";
 import AddToCart from "./AddToCart";
 import chat from '../assests/Icon/chat-bubble.png';
 import like from '../assests/Icon/like.png'
@@ -8,13 +7,13 @@ import Productlist from "./Productlist";
 import anotherProduct from '../json/women_bottom.json';
 
 export default function ProductDetail() {
-    const { state: { productDetail: { product } }, dispatch } = useContext(StoreContext);
+    const { state: { productDetail: { product } } } = useContext(StoreContext);
 
     return (
         <>
             <div className="productdetail_container">
                 <div className="productdetail_img">
-                    <img className="productdetail_img_img" src={product.imgUrl_1} />
+                    <img alt="" className="productdetail_img_img" src={product.imgUrl_1} />
                 </div>
                 <div className="productdetail_detail">
                     <div className="productdetail_detail_detail">
@@ -26,7 +25,7 @@ export default function ProductDetail() {
                         <div className="productdetail_price">NT {product.price}</div>
                         <div className="productdetail_button">
                             <img className="productdetail_icon" src={like} alt="" />
-                            <img className="productdetail_icon" src={chat} alt="" />
+                            <img lassName="productdetail_icon" src={chat} alt="" />
                         </div>
                         <AddToCart />
                         <div className="productdetail_information">

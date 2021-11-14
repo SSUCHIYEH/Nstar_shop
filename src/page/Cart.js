@@ -1,4 +1,4 @@
-import { Row, Col, Button } from "antd";
+import { Button } from "antd";
 import { useContext } from "react";
 import { StoreContext } from "../store";
 import NavBar from "../component/Navbar.js";
@@ -12,16 +12,7 @@ export default function Cart() {
         function TotalPrice() {
             return cartItems.reduce((sum, item) => sum + item.price, 0)
         }
-        function TotalPrice2() {
-            let sum = 0;
-            cartItems.map(e => {
-                sum = Number(sum) + Number(e.price);
-            });
-
-
-            return sum;
-
-        }
+       
         return (
 
             <div style={{position:'relative',paddingTop:'92px',minHeight:'100vh'}}> 
@@ -43,7 +34,7 @@ export default function Cart() {
                             <div className="cartlist_totlebox_detail_price">NT{TotalPrice()}</div>
                         </div>
                         <div className="cartlist_totlebox_btn">
-                            <Button type="primary" className="cartlist_totlebox_btn_" block
+                            <Button type="primary" className="cartlist_totlebox_btn_" 
                                 style={{ backgroundColor: 'black', borderColor: 'black' }}>
                                 去買單
                             </Button>

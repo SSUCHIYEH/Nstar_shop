@@ -1,17 +1,16 @@
 import NavBar from "../component/Navbar.js";
-import { useContext, useEffect } from "react";
-import { Layout } from 'antd';
+import React,{ useContext, useEffect,useState } from "react";
 import ProductDetail from "../component/ProductDetail";
 import { StoreContext } from "../store/index.js";
 import { setProductDetail } from "../actions/index.js";
 import Footer from "../component/Footer.js";
 
-const { Header, Content } = Layout;
-
 function Product({ match }) {
     const { dispatch } = useContext(StoreContext);
-    useEffect(() => setProductDetail(dispatch, match.params.productname, match.params.productclassify), [])
-
+    const [productname] = useState(match.params.productname)
+    const [classify] = useState(match.params.productclassify)
+    //setProductDetail(dispatch, productname, classify)
+    useEffect(() => setProductDetail(dispatch, productname, classify), [])
     return (
         <>
             <NavBar />
@@ -20,5 +19,8 @@ function Product({ match }) {
         </>
     )
 }
+
+
+
 
 export default Product;

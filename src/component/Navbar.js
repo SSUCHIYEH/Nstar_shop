@@ -1,31 +1,19 @@
 import { useState, useContext, useEffect } from "react";
 import NavItem from "./NavItem";
-import { Menu, Dropdown } from 'antd';
 import { StoreContext } from "../store"
-import { Badge, Avatar, Button } from "antd";
-
+import { Badge} from "antd";
 import landind_page_img from '../assests/Icon/logo.png'
 import search_icon from "../assests/Icon/loupe.png"
 import like_icon from '../assests/Icon/like.png'
 import cart_icon from '../assests/Icon/shopping-cart-outline.png'
 
-const menu = (
-    <Menu>
-        <Menu.Item >
-            <NavItem to="/shop/women_top" className="nav-item">top</NavItem>
-        </Menu.Item>
-        <Menu.Item >
-            <NavItem to="/shop/women_bottom" className="nav-item">bottom</NavItem>
-        </Menu.Item>
-    </Menu>
-);
+
 
 export default function NavBar() {
 
     const { state: { cartItems } } = useContext(StoreContext);
     const [active, setAcitve] = useState(false);
     const [ClassName, setClassname] = useState("collapse hide");
-    let collapse_className = "collapse hide"
     let counts = cartItems.length !== null  ? 0 :cartItems.length;
 
     function toggle() {
@@ -50,10 +38,10 @@ export default function NavBar() {
                 <ul className="ul">
                     <li className="li li-logo" >
                         <NavItem to="/" >
-                            <img className="nav-logo" src={landind_page_img} />
+                            <img alt="" className="nav-logo" src={landind_page_img} />
                         </NavItem>
                     </li>
-                    <li className="li"><a>women</a>
+                    <li className="li"><a href="/">women</a>
                         <ul className="ul">
                             <li className="li">
                                 <NavItem to="/shop/women_top" >top</NavItem>
@@ -63,7 +51,7 @@ export default function NavBar() {
                             </li>
                         </ul>
                     </li>
-                    <li className="li"><a href="#">men</a>
+                    <li className="li"><a href="/">men</a>
                         <ul className="ul">
                             <li className="li"><NavItem to="/shop/men_top" >top</NavItem></li>
                             <li className="li"><NavItem to="/shop/men_bottom" >bottom</NavItem></li>
@@ -74,22 +62,22 @@ export default function NavBar() {
                 <ul className="ul">
                     <li className="li" >
                         <NavItem to="/favorite" >
-                            <img className="navlist-icon" src={search_icon} />
+                            <img alt="" className="navlist-icon" src={search_icon} />
                         </NavItem>
                     </li>
                     <li className="li" >
-                        <NavItem to="/favorite" > <img className="navlist-icon" src={like_icon} /></NavItem>
+                        <NavItem to="/favorite" > <img alt="" className="navlist-icon" src={like_icon} /></NavItem>
                     </li>
                     <li className="li">
                         <div onMouseEnter={toggle}>
                             <NavItem to="/cart">
                                 <Badge showZero={true} count={counts} size={"small"}>
-                                    <img className="navlist-icon" src={cart_icon} />
+                                    <img alt="" className="navlist-icon" src={cart_icon} />
                                 </Badge>
                             </NavItem>
                         </div>
                     </li>
-                    <li className="li"><a href="#">Log in</a></li>
+                    <li className="li"><a href="/">Log in</a></li>
                     <li className="li li-btn">
                         <NavItem to="/shop/women_bottom" >Sign up</NavItem>
                     </li>
@@ -102,7 +90,7 @@ export default function NavBar() {
                     <div onMouseLeave={toggle} className={ClassName}>
                         {cartItems.map(product => (
                             <div className="collapse-item">
-                                <img className="collapse-item-img" src={product.imgUrl_1} />
+                                <img alt=""className="collapse-item-img" src={product.imgUrl_1} />
                                 <p className="collapse-item-name">{product.name}</p>
                                 <p className="collapse-item-price">NT {product.price}</p>
                             </div>

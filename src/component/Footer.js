@@ -13,9 +13,9 @@ export default function Footer() {
                 </div>
                 <div className="property"><p>© 2021InowGirl</p></div>
                 <div className="Footer-icon">
-                    <img className="Footer-icon-img" src={facebook} />
-                    <img src={ig} />
-                    <img src={line} />
+                    <img alt="" className="Footer-icon-img" src={facebook} />
+                    <img alt="" src={ig} />
+                    <img alt="" src={line} />
                 </div>
             </div>
         </div>

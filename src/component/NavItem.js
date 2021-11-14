@@ -5,8 +5,8 @@ import { getJSON } from "../api";
 import { pageContentSet } from "../actions";
 
 export default function NavItem(props){
-    const{ to , className ,children } = props;
-    const { state, dispatch } = useContext(StoreContext);
+    const{ to , children } = props;
+    const { dispatch } = useContext(StoreContext);
     const onClick = () => {
         console.log("click")
         pageContentSet(dispatch,children,getJSON(to,"Nav"))
