@@ -1,9 +1,9 @@
-import { Row, Col,Button } from "antd";
+import { Row, Col, Button } from "antd";
 import { useContext } from "react";
 import { StoreContext } from "../store";
 import NavBar from "../component/Navbar.js";
 import CartItem from "../component/CartItem";
-
+import Footer from "../component/Footer";
 export default function Cart() {
 
     const { state: { cartItems } } = useContext(StoreContext);
@@ -24,7 +24,7 @@ export default function Cart() {
         }
         return (
 
-            <>
+            <div style={{position:'relative',paddingTop:'92px',minHeight:'100vh'}}> 
                 <NavBar />
                 <div className="cartlist_title">
                     <div className="cartlist_title_item">商品</div>
@@ -50,15 +50,18 @@ export default function Cart() {
                         </div>
                     </div>
                 </div>
-            </>
+                <div style={{position:'absolute',bottom:0,width:"100%"}}>
+                <Footer />
+                </div>
+            </div>
         )
     } else {
         return (
-            <>
+            <div style={{ height:"100vh",display:"flex",flexDirection:"column",justifyContent:"space-between"}}>
                 <NavBar />
-                <div>nothing in cart,Go shop your fashion!</div>
-
-            </>
+                <div className="cart-noitem"><p>nothing in cart,Go shop your fashion!</p></div>
+                <Footer />
+            </div>
 
         )
     }

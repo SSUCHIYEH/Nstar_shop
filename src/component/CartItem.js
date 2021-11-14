@@ -1,5 +1,6 @@
 
 import { Checkbox } from 'antd';
+import deleteicon from '../assests//Icon/delete.png';
 
 function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
@@ -16,7 +17,7 @@ function CartItem({ item }) {
             <div className="cartlist_content_item">{item.name}</div>
             <div className="cartlist_content_price">NT{item.price}</div>
             <div className="cartlist_content_delete">
-                <img className="cartlist_content_delete_icon" src={item.imgUrl_1} />
+                <img className="cartlist_content_delete_icon" src={deleteicon} />
             </div>
         </div>
 

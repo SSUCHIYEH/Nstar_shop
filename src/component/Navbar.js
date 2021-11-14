@@ -90,7 +90,7 @@ export default function NavBar() {
                         </div>
                     </li>
                     <li className="li"><a href="#">Log in</a></li>
-                    <li className="li li-btn"> 
+                    <li className="li li-btn">
                         <NavItem to="/shop/women_bottom" >Sign up</NavItem>
                     </li>
                 </ul>
@@ -120,10 +120,14 @@ export default function NavBar() {
                     :
                     <div onMouseLeave={toggle} className={ClassName}>
                         <p>目前購物車沒有商品</p>
-                        <p>共{counts}件商品</p>
-                        <NavItem to="/cart">
-                            查看我的購物車
-                        </NavItem>
+                        <div className="collapse-bottom">
+                            <p className="collapse-total" >共{counts}件商品</p>
+                            <span className="collapse-button">
+                                <NavItem to="/cart">
+                                    查看我的購物車
+                                </NavItem>
+                            </span>
+                        </div>
                     </div>
 
             }

@@ -3,6 +3,7 @@ import { getJSON } from "../api";
 import Productlist from "../component/Productlist.js";
 import IntroOne from "../component/Intro_1.js";
 import IntroTwo from "../component/Intro_2.js";
+import Footer from "../component/Footer.js";
 
 function Home({ match }) {
     let products = getJSON(match.url, "Nav")
@@ -35,6 +36,7 @@ function Home({ match }) {
                     </div>
                 </div>
             </div>
+            <Footer />
 
         </>
     )

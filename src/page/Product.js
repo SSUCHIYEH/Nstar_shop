@@ -4,6 +4,7 @@ import { Layout } from 'antd';
 import ProductDetail from "../component/ProductDetail";
 import { StoreContext } from "../store/index.js";
 import { setProductDetail } from "../actions/index.js";
+import Footer from "../component/Footer.js";
 
 const { Header, Content } = Layout;
 
@@ -15,6 +16,7 @@ function Product({ match }) {
         <>
             <NavBar />
             <ProductDetail />
+            <Footer />
         </>
     )
 }

@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
 body {
   width: 100%;
-  //overflow-x: hidden;
   font-family: 'Noto Sans TC', sans-serif;
  
 }
@@ -14,7 +13,7 @@ body {
 
 .container-fluid {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1280px;
   padding: 0 15px;
 }
 
@@ -29,7 +28,7 @@ body {
 .nav {
   margin: 0 auto;
   display: flex;
-  max-width: 1200px;
+  max-width: 1280px;
 }
 .nav-logo {
   width: 134px;
@@ -172,7 +171,7 @@ body {
 }
 
 .productlist-title {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: auto;
   margin-top: 90px;
   padding-left: 26px;
@@ -182,7 +181,7 @@ body {
 .productlist-row {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: auto;
   margin-top: 24px;
 }
@@ -205,7 +204,7 @@ body {
 }
 /*------------------ star---------------------*/
 .star {
-  max-width: 1200px;
+  max-width: 1280px;
   width: 100%;
   padding-bottom: 100px;
 }
@@ -377,7 +376,8 @@ img.star-img {
   margin:25px 0px;
 }
 .cartlist_title {
-  margin: 92px;
+  max-width: 1280px;
+  margin: 0px auto;
   display: flex;
   height: 74px;
   border: 1px solid black;
@@ -406,9 +406,9 @@ img.star-img {
 
 .cartlist_content {
   /* margin: 92px; */
+  max-width: 1280px;
+  margin: 0px auto;
   margin-top: 20px;
-  margin-left: 92px;
-  margin-right: 92px;
   height: 100px;
   /* background-color: antiquewhite; */
   display: flex;
@@ -458,7 +458,10 @@ img.star-img {
 }
 
 .cartlist_totle {
-  margin: 92px;
+  width: 100%;
+  margin:0px auto ;
+  max-width: 1280px;
+  margin-top: 92px;
   height: 100px;
   /* background-color:aquamarine; */
   display: flex;
@@ -496,7 +499,14 @@ img.star-img {
   font-size: 20px;
   height: 62px;
 }
-
+.cart-noitem{
+  margin: 0px auto;
+  width: 100%;
+  max-width: 1280px;
+  margin-top: 100px;
+  
+ 
+}
 /*-------------------- cartlist end --------------------*/
 
 .nav2 {
@@ -592,6 +602,41 @@ img.star-img {
   
 }
 
+.Footer{
+  border: 1px solid #000000;
+  bottom: 0px;
+  width: 100%;
+}
+.Footer-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0px auto;
+  height: 88px;
+}
+.Footer .Footer-list{
+  display: flex;
+  p:nth-child(1){
+    margin-right: 56px;
+  }
+  
+}
+.Footer .property{
+  font-size: 14px;
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+}
+.Footer .Footer-icon{
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  img{
+    width: 32px;
+    height: 32px;
+  }
+}
 // .nav2 .ul .ul .ul {
 //   position: absolute;
 //   left: 100%;
