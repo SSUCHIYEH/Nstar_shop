@@ -25,7 +25,7 @@ export default function ProductDetail() {
                         <div className="productdetail_price">NT {product.price}</div>
                         <div className="productdetail_button">
                             <img className="productdetail_icon" src={like} alt="" />
-                            <img lassName="productdetail_icon" src={chat} alt="" />
+                            <img className="productdetail_icon" src={chat} alt="" />
                         </div>
                         <AddToCart />
                         <div className="productdetail_information">
