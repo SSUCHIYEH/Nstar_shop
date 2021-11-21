@@ -10,7 +10,7 @@ export default function Productlist({ products, text }) {
                 <Row gutter={52} className="productlist-row">
                     {products.map(product => (
                         <Col span={6} key={product.id}>
-                        <ProductItem product={product} />
+                        <ProductItem product={product} /> 
                         </Col>
                     ))}
 
@@ -22,32 +22,3 @@ export default function Productlist({ products, text }) {
 
     )
 }
-
-
-/* <Row gutter={[32, 32]}>
-    {products.map(product => (
-        <Col
-            key={product.name}
-            lg={{ span: 12 }}
-            xl={{ span: 8 }}
-            xxl={{ span: 6 }}
-        >
-            <ProductItem product={product} />
-        </Col>
-    ))}
-</Row> 
-
- <section className="container px-64">
-                <div className="row">
-                    {products.map(product => (
-                        <div className="productlist">
-                            <ProductItem product={product} />
-                        </div>
-                    ))}
-
-
-                </div>
-            </section>
-
-
-*/

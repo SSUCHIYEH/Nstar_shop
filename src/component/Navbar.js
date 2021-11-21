@@ -14,7 +14,7 @@ export default function NavBar() {
     const { state: { cartItems } } = useContext(StoreContext);
     const [active, setAcitve] = useState(false);
     const [ClassName, setClassname] = useState("collapse hide");
-    let counts = cartItems.length !== null  ? 0 :cartItems.length;
+    let counts = cartItems.length;
 
     function toggle() {
         setAcitve(!active)

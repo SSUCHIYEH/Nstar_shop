@@ -11,6 +11,7 @@ export default function AddToCart () {
 
     
     const addToCart = () => {
+        console.log('click')
         addCatItem(dispatch, product)
     }
 

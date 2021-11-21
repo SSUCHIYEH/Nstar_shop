@@ -25,3 +25,4 @@ function Product({ match }) {
 
 
 export default Product;
+
