@@ -26,7 +26,7 @@ export const addCatItem = (dispatch,product) => {
 // }
 
 export const setProductDetail = (dispatch, productId,productType) => {
-    const products = getJSON(`/shop/${productType}`,'set')
+    const products = getJSON(`/product/category/${productType}`,'set')
      const product = products.find(
         x => x.name === productId
     );

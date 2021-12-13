@@ -1,26 +1,35 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './page/Home.js'
-import Shop from './page/Shop'
+import ProductsCategory from './page/ProductsCategory'
 import Product from './page/Product'
 import Cart from './page/Cart.js'
 import "antd/dist/antd.css";
 import './sass/all.css';
 import { StoreProvider } from './store/index.js';
+import {routes} from './utils/route';
+import { renderRoutes } from 'react-router-config';
+import Footer from './component/Footer.js'
+import Navbar from './component/Navbar';
 
 function App() {
   return (
     <StoreProvider>
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/shop/:pageName" component={Shop} />
-          <Route path="/:productclassify/:productname" component={Product} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/favorite" component={Home} />
-        </Switch>
+        <Navbar />
+        {renderRoutes(routes)}
+        <Footer />
       </BrowserRouter>
     </StoreProvider>
   );
 }
 
 export default App;
+
+
+// <Switch>
+//           <Route exact path="/" component={Home} />
+//           <Route path="/shop/:pageName" component={ProductsCategory} />
+//           <Route path="/:productclassify/:productname" component={Product} />
+//           <Route path="/cart" component={Cart} />
+//           <Route path="/favorite" component={Home} />
+//         </Switch>

@@ -10,7 +10,6 @@ function Home({ match }) {
 
     return (
         <>
-            <NavBar />
             <IntroOne />
             <Productlist products={products} text="或許你會喜歡" />
 
@@ -36,8 +35,6 @@ function Home({ match }) {
                     </div>
                 </div>
             </div>
-            <Footer />
-
         </>
     )
 }

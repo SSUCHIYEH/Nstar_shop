@@ -8,13 +8,13 @@ export const getJSON = (url,where) => {
     switch (url) {
       case "/":
         return women_top;
-      case "/shop/women_top":
+      case "/product/category/women_top":
         return women_top;
-      case "/shop/men_top":
+      case "/product/category/men_top":
         return men_top;
-      case "/shop/women_bottom":
+      case "/product/category/women_bottom":
         return women_bottom;
-      case "/shop/men_bottom":
+      case "/product/category/men_bottom":
         return men_bottom;
       default:
         return women_top;

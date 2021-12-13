@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { StoreContext } from "../store";
-import AddToCart from "./AddToCart";
+import AddToCart from "../component/AddToCart";
 import chat from '../assests/Icon/chat-bubble.png';
 import like from '../assests/Icon/like.png'
-import Productlist from "./Productlist";
+import Productlist from "../component/Productlist";
 import anotherProduct from '../json/women_bottom.json';
 
 export default function ProductDetail() {
