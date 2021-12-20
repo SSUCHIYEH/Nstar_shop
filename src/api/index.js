@@ -1,3 +1,4 @@
+import axios from "axios";
 import women_top from "../json/women_top.json";
 import women_bottom from "../json/women_bottom.json";
 import men_top from "../json/men_top.json";
@@ -20,3 +21,15 @@ export const getJSON = (url,where) => {
         return women_top;
     }
   };
+
+  const _axios = (baseURL) => {
+    const instance = axios.create({
+      baseURL: baseURL,
+      timeout: 20000,
+    });
+
+    return instance
+  };
+
+  export { _axios };
+  export default _axios();

@@ -4,14 +4,31 @@ import Productlist from "../component/Productlist.js";
 import IntroOne from "../component/Intro_1.js";
 import IntroTwo from "../component/Intro_2.js";
 import Footer from "../component/Footer.js";
+import { useEffect, useState } from "react";
+import { getProductByCategory } from "../api/productAPI.js";
 
 function Home({ match }) {
     let products = getJSON(match.url, "Nav")
+    const [_productData, setProductData] = useState()
+    useEffect(() => {
+
+        getProductByCategory("men_top").then((resp) => {
+            if(resp.data){
+                console.log(resp);
+                setProductData(resp.data);
+            }
+        }).catch((err)=>{
+            console.log(err);
+        });
+    }, [])
 
     return (
         <>
             <IntroOne />
-            <Productlist products={products} text="或許你會喜歡" />
+            {_productData?
+            <Productlist products={_productData} text="或許你會喜歡" />
+            :null}
+
 
             <IntroTwo />
             <div className="star productlist-title container">

@@ -1,9 +1,7 @@
 import { Button } from "antd";
 import { useContext } from "react";
 import { StoreContext } from "../store";
-import NavBar from "../component/Navbar.js";
 import CartItem from "../component/CartItem";
-import Footer from "../component/Footer";
 
 export default function UserCart() {
 

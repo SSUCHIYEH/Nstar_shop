@@ -1,15 +1,32 @@
-import { useContext } from "react";
-import NavBar from "../component/Navbar.js";
+import { useContext, useEffect,useState } from "react";
+import { useParams } from "react-router-dom"
+import { getProductByCategory } from "../api/productAPI.js";
 import Productlist from "../component/Productlist.js";
 import { StoreContext } from "../store/index.js";
-import Footer from "../component/Footer.js";
+
 
 
 function ProductsCategory() {
-    const { state: { page: { products } } } = useContext(StoreContext)
+    const [productData, setProductData] = useState();
+    const {category} = useParams();
+    
+    useEffect(() => {
+        getProductByCategory(category).then((resp)=>{
+            if(resp.data){
+                console.log(resp.data)
+                setProductData(resp.data);
+            }
+        }).catch((err)=>{
+            console.log(err);
+        })
+    }, [category])
+
     return (
         <>
-            <Productlist products={products} />
+            {productData?
+                <Productlist products={productData} />
+            :   null 
+            }
         </>
 
     )
